@@ -20,7 +20,7 @@ Main goals from this project and future expansion:
  * Using python data science libraries to further understand the dataset and build a prediction model
  * Apply proper data cleaning and preprocessing techniques to dataset to ensure best accuracy from model
  * Future expansions to the analysis like future feature building and creating more advanced machine learning models with the dataset
- * Understand Logistic regression, it's use case in the context of this dataset and build more complex models
+ * Understand Logistic regression, it's use case in the context of this dataset and build more complex models with the dataset. 
 
 
 ### Data Loading
@@ -66,26 +66,55 @@ Looking at the correlation heatmap, we can see there are a lot of negative and a
 
 
 ### Model Evaluation
+* Looking at the results from the logistic regression prediction model, the results showed an accuracy of 83%, the results are decent for a prediction model.
+* The results show a heavy imbalance between predicting non-churners as the dataset contains a lot of non-churn customers which may be a reason. 
 
 
 
+**Classification Report:**
 
+![image](https://github.com/user-attachments/assets/abd60168-a760-4980-a7db-91f6ee5741e4)
 
+**Dataset Imbalance Impact:**
+
+- The model performs significantly better in predicting non-churned customers (0) compared to churned customers (1).
+- Precision, recall, and F1-score for Class 0 (88%, 89%, 0.88) are much higher than for Class 1 (68%, 65%, 0.67).
+- This suggests that the model is biased towards the majority class (non-churned customers).
+- The model definitely struggled in preodicting churners which was the main focus in attempting due to class imbalance
+- A look into techniques like oversampling (e.g., SMOTE), undersampling, or using class weights in the logistic regression algorithm could help address this issue.
 
 
 **Confusion Matrix:**
 
 ![Confusion Matrix](https://github.com/user-attachments/assets/1646c4ec-8729-4abf-a20b-f0f0c524dabd)
 
+![image](https://github.com/user-attachments/assets/3e4b545c-8f6d-4f9b-a8f5-14481942291e)
+
+**Confusion Matrix Analysis:**
+
+- True Negatives (924): The model accurately predicts most non-churned customers.
+- False Positives (112): Some customers who are not likely to churn are incorrectly predicted as churners.
+- False Negatives (131): A notable number of churned customers are incorrectly classified as non-churned, indicating a need for better churn prediction.
+- True Positives (242): The model successfully identifies many churned customers but struggles with recall for this group.
 
 
 **ROC Curve:**
 
 ![image](https://github.com/user-attachments/assets/1b80b2be-1ce1-4c18-a940-ddc4284169be)
 
+- Looking at the ROC curve shows the tradeoff between sensitivity (recall for churners) and specificity (ability to avoid false positives for non-churners
+- The AUC is a single scalar value that can be used to summarize the ROC curve.
+- The AUC score of 88 shows the model is highly effective but could benefit from slight refinements, such as better feature selection, handling class imbalance, or hyperparameter tuning.
 
+Room for Improvement in Recall for Churners:
+
+- While AUC is high, your recall for predicting churners (Class 1) is only 65%. This means 35% of actual churners are being misclassified as non-churners.
+- Ways to fix this issue of churners and non-churners inbalance, Adjust the threshold to increase recall for churners and address class imbalance using techniques like oversampling (SMOTE) or undersampling.
 
 ### Conclusion and Future Work
-* For future expansion, building more complex models such as Random Forest, Gradient boosting 
+* The model showed 83% accuracy which is decent results but does not paint the whole picture in terms of inbalance. 
+* For future expansion, building more complex models such as Random Forest, Gradient boosting, AdaBoostRegressor and KNeighborsRegressor
+* Look into solving the data imbalance in non-churn and churn customers in the dataset with techniques like oversampling (e.g., SMOTE), undersampling, or using class weights in the logistic regression algorithm could help address this issue.
+* Learning more about predictive modeling can be beneficial, building more feature engineering with more refine features and compare alternative other predictive models. 
 
 
