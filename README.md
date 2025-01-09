@@ -58,11 +58,34 @@ Customer's age can be a factor if they churn or not, older customers may not be 
 Looking at the correlation heatmap, we can see there are a lot of negative and a few positive correlation between each of the columns. Some positive correlations that can be further explored include Total revenue and tenure, total revenue and total charges, a customer's monthly charges compared to total charges. Some negative correlations are churn value and satisfaction score, satisfaction and monthly charges etc.  
 
 
-
 ### Model Building
+* For the model, a logistic regression model should be sufficient in identifying potential customers who will churn. Starting with a simple logistic regression model with the target value being **churn_value** since the value is already a binary value 0 or 1.
+* We choose a logistic regression model because our main goal was predicting if a customer will churn with this project, which logistic regression will prove to be the best. 
+* Understanding logistic regression, we need target variable(binary) and features(independent variables).
+* For metrics of the model, we will use the scikit-learn libaries importing metrics such as accuracy score, confusion matrix, classification report, roc curve and AUC score. 
 
 
 ### Model Evaluation
 
 
+
+
+
+
+
+**Confusion Matrix:**
+
+![Confusion Matrix](https://github.com/user-attachments/assets/1646c4ec-8729-4abf-a20b-f0f0c524dabd)
+
+
+
+**ROC Curve:**
+
+![image](https://github.com/user-attachments/assets/1b80b2be-1ce1-4c18-a940-ddc4284169be)
+
+
+
 ### Conclusion and Future Work
+* For future expansion, building more complex models such as Random Forest, Gradient boosting 
+
+
