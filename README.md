@@ -106,7 +106,7 @@ Looking at the correlation heatmap, we can see there are a lot of negative and a
 - The AUC is a single scalar value that can be used to summarize the ROC curve.
 - The AUC score of 88 shows the model is highly effective but could benefit from slight refinements, such as better feature selection, handling class imbalance, or hyperparameter tuning.
 
-Room for Improvement in Recall for Churners:
+**Room for Improvement in Recall for Churners:**
 
 - While AUC is high, your recall for predicting churners (Class 1) is only 65%. This means 35% of actual churners are being misclassified as non-churners.
 - Ways to fix this issue of churners and non-churners inbalance, Adjust the threshold to increase recall for churners and address class imbalance using techniques like oversampling (SMOTE) or undersampling.
