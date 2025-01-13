@@ -24,7 +24,7 @@ Main goals from this project and future expansion:
 
 
 ### Data Loading
-First we load the dataset into python and the necessary libraries needed for the analysis and model building. In this case the libraries needed for this would be pandas, numpy, seaborn, matplotlib, and scikit-learn for logistic regression. Pandas for data manipulation, exploratory data analysis, data cleaning, numpy for any numerical calculations and any future mathematical operations we may need. Seaborn and matplotlib for any data visualizations when exploring the dataset and looking at any useful insights. Finally Scikit-learn machine learning library for building the logistic regression prediction model including train_test_split, LogisticRegression, accuracy_score, confusion_matrix, classification_report,roc_curve, auc etc. 
+First we load the dataset into python and the necessary libraries needed for the analysis and model building. In this case the libraries needed for this would be pandas, numpy, seaborn, matplotlib, and scikit-learn for logistic regression. Pandas for data manipulation, exploratory data analysis, data cleaning, numpy for any numerical calculations and any future mathematical operations we may need. Seaborn and matplotlib for any data visualizations when exploring the dataset and looking at any useful insights. Finally Scikit-learn machine learning library for building the logistic regression prediction model including all of the required library add-ons such as train_test_split, LogisticRegression, accuracy_score, confusion_matrix, classification_report,roc_curve, auc etc. 
 
 
 ### Data Cleaning and Preprocessing
